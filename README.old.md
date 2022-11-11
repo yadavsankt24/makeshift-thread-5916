@@ -1,0 +1,28 @@
+# rack
+# In order to run the website user have to download some important libraries in his Terminal
+
+1) "@emotion/react": "^11.9.0",
+2) "@emotion/styled": "^11.8.1",
+3) "@mui/material": "^5.6.4",
+4) "@testing-library/jest-dom": "^5.16.4",
+5) "@testing-library/react": "^13.1.1",
+6) "@testing-library/user-event": "^13.5.0",
+7) "bootstrap": "^5.1.3",
+8) "glider-js": "^1.7.7",
+9) "nanoid": "^3.3.4",
+10) "react": "^18.1.0",
+11) "react-bootstrap": "^2.3.1",
+12) "react-dom": "^18.1.0",
+13) "react-elastic-carousel": "^0.11.5",
+14) "react-lifecycles-compat": "^3.0.4",
+15) "react-loading-spin": "^2.1.9",
+16) "react-minimal-side-navigation": "^1.9.2",
+17) "react-pro-sidebar": "^0.7.1",
+18) "react-redux": "^8.0.1",
+19) "react-router-dom": "^6.3.0",
+20) "react-scripts": "5.0.1",
+21) "react-slick": "^0.29.0",
+22) "redux": "^4.2.0",
+23) "slick-carousel": "^1.8.1",
+24) "styled-components": "^5.3.5",
+25) "web-vitals": "^2.1.4"2
