@@ -1,4 +1,5 @@
 import { Box, Image, Text, Link, Button } from "@chakra-ui/react";
+import "./Homepage.css";
 
 
 function Homepage(){
@@ -134,6 +135,74 @@ function Homepage(){
                     <Text lineHeight="20px" w="80%" fontWeight="400" fontSize="14px">Get festive fashion advice from our stylists.</Text>
                     <Link textDecoration="underline" fontSize="16px">Learn More</Link>
                     <Link ml="5%" textDecoration="underline" fontSize="16px">Book an Appointment</Link>
+                </Box>
+            </Box>
+        </Box>
+        <Box w="95%" display="flex" m="auto" alignItems="center" color="white">
+                <Image position="relative" src="https://n.nordstrommedia.com/id/50731a37-8fb1-4ae1-bd40-4597e2266297.jpeg?h=200&w=1608" alt="img" />
+            <Box w="50%" position="absolute" right="8%" textAlign="left">
+                <Text color="white" fontSize="22px">New Episodes Every Other Week</Text>
+                <Text color="white" fontWeight="400" fontSize="15px">Go behind the scenes of Nordstrom with Pete Nordstrom and special guests. </Text>
+                <Link textDecoration="underline" fontSize="16px">Learn More</Link>
+            </Box>
+        </Box>
+        <Box w="95%" m="40px auto">
+            <Image mb="40px" src="https://n.nordstrommedia.com/id/5ec3d3de-9e8c-4317-bc28-3b42b503268e.png?h=17&w=1608" alt="img" />
+            <Text color="gray.700" fontSize="2xl">SHOP BY CATEGORY</Text>
+            <Box display="flex" justifyContent="space-between" mt="50px" textAlign="center">
+                <Box w="16%">
+                    <Image src="https://n.nordstrommedia.com/id/8d5e2126-1fca-42f8-b71b-ce9d1a3cc0ab.jpeg?h=365&w=268" alt="img" />
+                    <Text color="gray.700" fontSize="18px">Women</Text>
+                </Box>
+                <Box w="16%">
+                    <Image src="https://n.nordstrommedia.com/id/fb45282f-b5e1-423b-9894-4a6071e7d3a1.jpeg?h=365&w=268" alt="img" />
+                    <Text color="gray.700" fontSize="18px">Men</Text>
+                </Box>
+                <Box w="16%">
+                    <Image src="https://n.nordstrommedia.com/id/278ded2f-d53f-4c14-a88c-8bc5ba1efe56.jpeg?h=365&w=268" alt="img" />
+                    <Text color="gray.700" fontSize="18px">Kids</Text>
+                </Box>
+                <Box w="16%">
+                    <Image src="https://n.nordstrommedia.com/id/1ceda26d-5052-4510-811b-82d30dbd5a23.jpeg?h=365&w=268" alt="img" />
+                    <Text color="gray.700" fontSize="18px">Home</Text>
+                </Box>
+                <Box w="16%">
+                    <Image src="https://n.nordstrommedia.com/id/a29eca50-eeb5-4d37-a2bf-2932c60746a3.jpeg?h=365&w=268" alt="img" />
+                    <Text color="gray.700" fontSize="18px">Beauty & Fragrance</Text>
+                </Box>
+                <Box w="16%">
+                    <Image src="https://n.nordstrommedia.com/id/48027591-850a-4544-814e-b458e00d6a51.jpeg?h=365&w=268" alt="img" />
+                    <Text color="gray.700" fontSize="18px">Designer</Text>
+                </Box>
+            </Box>
+        </Box>
+        <Box w="95%" m="40px auto">
+            <Image mb="40px" src="https://n.nordstrommedia.com/id/5ec3d3de-9e8c-4317-bc28-3b42b503268e.png?h=17&w=1608" alt="img" />
+            <Text color="gray.700" fontSize="2xl">SERVICES & EVENTS</Text>
+            <Box w="95%" m="auto" display="flex" justifyContent="space-between" textAlign="left" mt="50px">
+                <Box className="container">
+                    <Image src="https://cdn.dashhudson.com/media/640/1634145375.908124478742.jpeg" alt="Avatar" className="image" w="100%"/>
+                    <Box className="middle">
+                        <Box className="text">Shop Now</Box>
+                    </Box>
+                </Box>
+                <Box className="container">
+                    <Image src="https://cdn.dashhudson.com/media/640/1633576910.42796190538.jpeg" alt="Avatar" className="image" w="100%"/>
+                    <Box className="middle">
+                        <Box className="text">Shop Now</Box>
+                    </Box>
+                </Box>
+                <Box className="container">
+                    <Image src="https://cdn.dashhudson.com/media/640/1638985643.81467653793.jpeg" alt="Avatar" className="image" w="100%"/>
+                    <Box className="middle">
+                        <Box className="text">Shop Now</Box>
+                    </Box>
+                </Box>
+                <Box className="container">
+                    <Image src="https://cdn.dashhudson.com/media/640/1639450121.23927782505.jpeg" alt="Avatar" className="image" w="100%"/>
+                    <Box className="middle">
+                        <Box className="text">Shop Now</Box>
+                    </Box>
                 </Box>
             </Box>
         </Box>
