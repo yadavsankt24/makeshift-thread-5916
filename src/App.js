@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-     <h1>Let's Play with Nordstorm</h1>
+     {/* <h1>Let's Play with Nordstorm</h1> */}
      <AllRoutes />
     </div>
   );
