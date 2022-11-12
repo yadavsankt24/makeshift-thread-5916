@@ -4,7 +4,15 @@
 
 * {
   font-family: Brandon Text, Arial, sans-serif;
+  
 }
+
+.div__2 img {
+width: 250px;
+height: 100px;
+border-radius: 50%;
+}
+
 
 .darkcyan_1 {
   height: 40px;

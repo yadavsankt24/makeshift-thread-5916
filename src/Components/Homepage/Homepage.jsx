@@ -7,18 +7,18 @@ function Homepage(){
 
     return <Box>
         <Megha/>
-        <Box w="95%" m="auto" display="flex" justifyContent="space-between" p="40px 0px 60px 0px">
-            <Box w="25%">
+        <Box  w="95%" m="auto" display="flex" justifyContent="space-between" p="40px 0px 60px 0px">
+            <Box marginTop="4%" w="25%">
                 <Image w="100%" src="https://n.nordstrommedia.com/id/c30eb052-a9da-4529-95ed-0d1568cc55ad.png?h=22&w=536" alt="colors" />
             </Box>
             <Box>
                 <Box>
-                    <Text color="gray.700" fontSize='xl' fontWeight="700">Shop what you love—faster and easier.</Text>
-                    <Link href="/signAuth" textDecoration="underline" fontweight="300" fontSize='sm'>Sign In or Create an Account</Link>
+                    <Text marginTop="16%" color="gray.700" fontSize='large' fontWeight="bold">Shop what you love—faster and easier.</Text>
+                    <Link  href="/signin" color="teal" textDecoration="none" fontweight="bold" fontSize='large'>Sign In or Create an Account</Link>
                 </Box>
             </Box>
             <Box  w="25%">
-                <Image w="100%" src="https://n.nordstrommedia.com/id/01471914-5c74-4e79-a258-af5f398b1a73.png?h=22&w=536" alt="colors" />
+                <Image marginTop="14%" w="100%" src="https://n.nordstrommedia.com/id/01471914-5c74-4e79-a258-af5f398b1a73.png?h=22&w=536" alt="colors" />
             </Box>
         </Box>
         <Box w="95%" m="auto" bg="#f0f1f2" p="22px">

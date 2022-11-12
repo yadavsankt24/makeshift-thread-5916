@@ -7,6 +7,8 @@ import Button from "@mui/material/Button";
 import { mainState_true, signout } from "../../Redux/Data/Action";
 import { useDispatch, useSelector } from "react-redux";
 import { mainState_false } from "../../Redux/Data/Action";
+import img from "../../assets/1.jpg"
+import {BsCart2} from "react-icons/bs"
 
 import {BiPurchaseTagAlt} from "react-icons/bi"
 
@@ -72,7 +74,7 @@ const Navbar = () => {
 
         <div className={styles.div__2}>
           <div onClick={() => navigate("/")}>
-            <h2>NORDSTORM</h2>
+            <h1 fontWeight="bolder">NORDSTROM</h1>
           </div>
 
           <div className={styles.relative_position}>
@@ -475,7 +477,7 @@ const Navbar = () => {
                 {/* <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2zM5 8h6a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z" /> */}
               </svg>
             </div>
-            <p>Purchases</p>
+            <p>Purchases</p> <p >< BsCart2/></p>
           </div>
         </div>
       </div>
