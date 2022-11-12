@@ -25,7 +25,9 @@ function Navbar(){
         <Box>
             <Box borderBottom="1px solid gray" w="95%" m="auto"display="flex" justifyContent="space-between" alignItems="center" p="20px 0px">
                 <Box w="15%">
-                    <Image src="https://upload.wikimedia.org/wikipedia/commons/8/81/Nordstrom_Logo_2019.svg" alt="logo" />
+                    <Link href="/">
+                        <Image src="https://upload.wikimedia.org/wikipedia/commons/8/81/Nordstrom_Logo_2019.svg" alt="logo" />
+                    </Link>
                 </Box>
                 <Box w="45%">
                     <InputGroup>
@@ -37,7 +39,7 @@ function Navbar(){
                     </InputGroup>
                 </Box>
                 <Box w="30%" display="flex" justifyContent="space-between" alignItems="center">
-                    <Link display="flex" alignItems="center" href='#' fontSize="15px">
+                    <Link display="flex" alignItems="center" href='/signAuth' fontSize="15px">
                         Sign In <Icon as={ChevronDownIcon} w={6} h={6} />
                     </Link>
                     <Link display="flex" alignItems="center" gap="5px" href='#' fontSize="15px">
@@ -53,7 +55,7 @@ function Navbar(){
             </Box>
         </Box>
         <Box>
-            <Box w="90%" m="auto" p="20px 0px" fontSize="15px" display="flex" justifyContent="space-between">
+            <Box w="87%" m="auto" p="20px 0px" fontSize="15px" display="flex" justifyContent="space-between">
                 <Link display="flex" gap="3px" alignItems="center" href='#'><Icon color="gray.600" as={CgGift} w={5} h={5} /> Holiday Gifts</Link>
                 <Link color="red.600">Holiday Deals</Link>
                 <Link>Women</Link>
