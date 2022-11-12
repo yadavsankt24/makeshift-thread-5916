@@ -1,12 +1,10 @@
-// import { reducer as AppReducer } from "./AppReducer/reducer";
-// import { reducer as AuthReducer } from "./AuthReducer/reducer";
-// import thunk from 'redux-thunk'
-// import {applyMiddleware, legacy_createStore, combineReducers,compose} from 'redux'
+import { combineReducers, legacy_createStore } from "redux";
+import { dataReducer } from "./Data/Reducer";
 
-// const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-// const rootReducer = combineReducers({ AppReducer, AuthReducer });
-// const store = legacy_createStore(
-//   rootReducer,
-//   composeEnhancers(applyMiddleware(thunk))
-// );
-// export { store };
+const enhancer = combineReducers({
+    Data:dataReducer
+})
+
+
+
+export const store = legacy_createStore(enhancer)

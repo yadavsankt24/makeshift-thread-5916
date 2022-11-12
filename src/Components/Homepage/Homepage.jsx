@@ -1,9 +1,12 @@
 import { Box, Image, Text, Link, Button } from "@chakra-ui/react";
+import Megha from "../Meghamenu/Megha";
 import "./Homepage.css";
 
 
 function Homepage(){
+
     return <Box>
+        <Megha/>
         <Box w="95%" m="auto" display="flex" justifyContent="space-between" p="40px 0px 60px 0px">
             <Box w="25%">
                 <Image w="100%" src="https://n.nordstrommedia.com/id/c30eb052-a9da-4529-95ed-0d1568cc55ad.png?h=22&w=536" alt="colors" />
