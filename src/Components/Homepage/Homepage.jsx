@@ -1,8 +1,473 @@
-import { Box, Image, Text, Link, Button } from "@chakra-ui/react";
+import { Box, Image, Text, Link, Button, Tabs, TabList, Tab, TabPanels, TabPanel } from "@chakra-ui/react";
 import "./Homepage.css";
 
 
 function Homepage(){
+
+    const Women= [
+        {
+            name:"Open Edit",
+            img:"https://n.nordstrommedia.com/id/sr3/4f4a6450-fc23-4e3d-af8f-79b10f9b82b0.jpeg?q=45&dpr=2&h=365.31&w=230",
+            price:"INR 1,741.44 - INR 3,869.86",
+            desc:"Limited-Time Sale",
+            rating:"4",
+            total:"28"
+        },
+        {
+            name:"Free People",
+            img:"https://n.nordstrommedia.com/id/sr3/b3b4d851-2bad-42e0-bd1c-c6946eaa242e.jpeg?q=45&dpr=2&h=365.31&w=230",
+            price:"INR 3,404.62 - INR 7,567.73",
+            desc:"Limited-Time Sale",
+            rating:"4.1",
+            total:"4"
+        },
+        {
+            name:"1.State",
+            img:"https://n.nordstrommedia.com/id/sr3/7ab68c55-33bd-4393-a29d-c264a53af209.jpeg?q=45&dpr=2&h=365.31&w=230",
+            price:"INR 2,572.03 (Extra 25% Off)",
+            desc:"Holiday Deal",
+            rating:"4.2",
+            total:"107"
+        },
+        {
+            name:"Open Edit",
+            img:"https://n.nordstrommedia.com/id/sr3/c5920c74-80c5-437f-a291-f6afd4f6d677.jpeg?q=45&dpr=2&h=365.31&w=230",
+            price:"INR 2,224.74 (Extra 25% Off)",
+            desc:"Limited-Time Sale",
+            rating:"3.8",
+            total:"3"
+        },
+        {
+            name:"NordStorm",
+            img:"https://n.nordstrommedia.com/id/sr3/1772a05e-aace-496d-bdfa-30bc13b72b34.jpeg?q=45&dpr=2&h=365.31&w=230",
+            price:"INR 4513.98 (Extra 25% Off)",
+            desc:"Holiday Deal",
+            rating:"4.2",
+            total:"11"
+        }
+    ]
+    const Men=[
+        {
+            name:"UCGR",
+            img:"https://n.nordstrommedia.com/id/sr3/8222eb9e-2d38-46ff-b6c7-1b8fa53b1eb5.jpeg?q=45&dpr=2&h=365.31&w=230",
+            price:"INR 3,869.86 (Extra 25% Off)",
+            desc:"Limited-Time Sale",
+            rating:"3.9",
+            total:"6"
+        },
+        {
+            name:"UCGR",
+            img:"https://n.nordstrommedia.com/id/sr3/2b027729-3820-4cc2-9e7f-db770e0988ba.jpeg?q=45&dpr=2&h=365.31&w=230",
+            price:"INR 6,191.78 (Extra 25% Off)",
+            desc:"Limited-Time Sale",
+            rating:"4.1",
+            total:"4"
+        },
+        {
+            name:"Robert Barakett",
+            img:"https://n.nordstrommedia.com/id/sr3/c930ca14-a968-48eb-af5f-57a4a9bde0eb.jpeg?q=45&dpr=2&h=365.31&w=230",
+            price:"INR 2,241.08 - INR 5,976.78",
+            desc:"Limited-Time Sale",
+            rating:"4.3",
+            total:"558"
+        },
+        {
+            name:"Nike",
+            img:"https://n.nordstrommedia.com/id/sr3/5b7aa517-4b15-479f-bc6b-607fc9ab1723.jpeg?q=45&dpr=2&h=365.31&w=230",
+            price:"INR 4,578.47 - INR 8,599.69",
+            desc:"Limited-Time Sale",
+            rating:"3.8",
+            total:"3"
+        },
+        {
+            name:"Zella",
+            img:"https://n.nordstrommedia.com/id/sr3/99341903-33c0-4a11-80bd-ba6117f105a0.jpeg?q=45&dpr=2&h=365.31&w=230",
+            price:"INR 644.12 - INR 1,885.91",
+            desc:"Limited-Time Sale",
+            rating:"3.5",
+            total:"27"
+        }
+    ]
+    const Designer=[
+        {
+            name:"Johanna Ortiz",
+            img:"https://n.nordstrommedia.com/id/sr3/a1289cba-2975-442a-9bde-ccc5067824a7.jpeg?q=45&dpr=2&h=365.31&w=230",
+            price:"INR 3,869.86 (Extra 25% Off)",
+            desc:"Limited-Time Sale",
+            rating:"3.9",
+            total:"6"
+        },
+        {
+            name:"PALMES",
+            img:"https://n.nordstrommedia.com/id/sr3/fefba81d-f6d7-4a20-8c57-7ad71f772bae.jpeg?q=45&dpr=2&h=365.31&w=230",
+            price:"INR 1,932.35 (Extra 25% Off)",
+            desc:"Limited-Time Sale",
+            rating:"4.1",
+            total:"4"
+        },
+        {
+            name:"Johanna Ortiz",
+            img:"https://n.nordstrommedia.com/id/sr3/2cc5a5a1-8c5f-4fbd-a6f2-12dfc9c9f7ea.jpeg?q=45&dpr=2&h=365.31&w=230",
+            price:"INR 38,698.60 (40% Off)",
+            desc:"Limited-Time Sale",
+            rating:"4.3",
+            total:"558"
+        },
+        {
+            name:"KENZO",
+            img:"https://n.nordstrommedia.com/id/sr3/e394e1ea-eb0a-40dd-a206-62f57924c979.jpeg?q=45&dpr=2&h=365.31&w=230",
+            price:"INR 5,030.82 (Extra 25% Off)",
+            desc:"Limited-Time Sale",
+            rating:"3.8",
+            total:"3"
+        },
+        {
+            name:"Johanna Ortiz",
+            img:"https://n.nordstrommedia.com/id/sr3/79391714-4be7-4ee9-b1e2-d44d2ddbfc25.jpeg?q=45&dpr=2&h=365.31&w=230",
+            price:"INR 64,497.67 (40% Off)",
+            desc:"Limited-Time Sale",
+            rating:"3.5",
+            total:"27"
+        }
+    ]
+    const Kids=[
+        {
+            name:"UCGR",
+            img:"https://n.nordstrommedia.com/id/sr3/85d87a52-6b08-4658-b46e-0142ab6bf02c.jpeg?q=45&dpr=2&h=365.31&w=230",
+            price:"INR 5,803.93 (Extra 25% Off)",
+            desc:"Limited-Time Sale",
+            rating:"3.9",
+            total:"6"
+        },
+        {
+            name:"UCGR",
+            img:"https://n.nordstrommedia.com/id/sr3/85d87a52-6b08-4658-b46e-0142ab6bf02c.jpeg?q=45&dpr=2&h=365.31&w=230",
+            price:"INR 5,158.95 (Extra 25% Off)",
+            desc:"Limited-Time Sale",
+            rating:"4.1",
+            total:"4"
+        },
+        {
+            name:"Robert Barakett",
+            img:"https://n.nordstrommedia.com/id/sr3/499808f7-3b90-496d-b974-8aaacb391fae.jpeg?q=45&dpr=2&h=365.31&w=230",
+            price:"INR 2,579.05 - INR 5,159.81",
+            desc:"Limited-Time Sale",
+            rating:"4.3",
+            total:"558"
+        },
+        {
+            name:"Tucker + Tate",
+            img:"https://n.nordstrommedia.com/id/sr3/42ecbe0b-64d5-4364-a276-ae11e415ef65.jpeg?q=45&dpr=2&h=365.31&w=230",
+            price:"INR 4,89.32 - INR 1,633.94",
+            desc:"Limited-Time Sale",
+            rating:"3.8",
+            total:"3"
+        },
+        {
+            name:"Nordstrom",
+            img:"https://n.nordstrommedia.com/id/sr3/385b29ee-a4f6-402e-8ee7-bf578fc833e2.jpeg?q=45&dpr=2&h=365.31&w=230",
+            price:"INR 1,885.92 (Extra 25% Off)",
+            desc:"Limited-Time Sale",
+            rating:"3.5",
+            total:"27"
+        }
+    ]
+    const Beauty=[
+        {
+            name:"Lancome",
+            img:"https://n.nordstrommedia.com/id/sr3/a6a6549e-1610-48ea-8666-bcae9f63b51c.jpeg?q=45&dpr=2&h=365.31&w=230",
+            price:"INR 6,707.76 - INR 19,779.29",
+            desc:"Limited-Time Sale",
+            rating:"3.9",
+            total:"6"
+        },
+        {
+            name:"Kiehl's since 1851",
+            img:"https://n.nordstrommedia.com/id/sr3/48e7d4da-1d79-4ef1-933c-9c6859b0ea82.jpeg?q=45&dpr=2&h=365.31&w=230",
+            price:"INR 2,407.91 (30% Off)",
+            desc:"Limited-Time Sale",
+            rating:"4.1",
+            total:"4"
+        },
+        {
+            name:"Voluspa",
+            img:"https://n.nordstrommedia.com/id/sr3/59fa2e5f-aa59-42ba-9183-f2b908fe42fa.jpeg?q=45&dpr=2&h=365.31&w=230",
+            price:"INR 1,375.95 - INR 2,201.52",
+            desc:"Limited-Time Sale",
+            rating:"4.3",
+            total:"558"
+        },
+        {
+            name:"Lake & Skyke",
+            img:"https://n.nordstrommedia.com/id/sr3/e35e441b-844e-44cc-afdc-bb81e0e70bea.jpeg?q=45&dpr=2&h=365.31&w=230",
+            price:"INR 2,321.92 - INR 6,320.77",
+            desc:"Limited-Time Sale",
+            rating:"3.8",
+            total:"3"
+        },
+        {
+            name:"Kiehl's since 1851",
+            img:"https://n.nordstrommedia.com/id/sr3/1918a971-8e85-44a5-a016-5ce375451bdf.jpeg?q=45&dpr=2&h=365.31&w=230",
+            price:"INR 2,889.50 (30% Off)",
+            desc:"Limited-Time Sale",
+            rating:"3.5",
+            total:"27"
+        }
+    ]
+    const Home=[
+        {
+            name:"NordStorm",
+            img:"https://n.nordstrommedia.com/id/sr3/8d2ab5ab-9276-4bfc-91ea-41f5966298f5.jpeg?q=45&dpr=2&h=365.31&w=230",
+            price:"INR 1,741.44 - INR 3,869.86",
+            desc:"Limited-Time Sale",
+            rating:"4",
+            total:"28"
+        },
+        {
+            name:"NordStorm",
+            img:"https://n.nordstrommedia.com/id/sr3/5ec2d653-d11c-49dd-b424-db38e49edfc9.jpeg?q=45&dpr=2&h=365.31&w=230",
+            price:"INR 3,404.62 - INR 7,567.73",
+            desc:"Limited-Time Sale",
+            rating:"4.1",
+            total:"4"
+        },
+        {
+            name:"Our Place",
+            img:"https://n.nordstrommedia.com/id/sr3/e5bc2555-7051-416f-b803-13c7bb6e6502.jpeg?q=45&dpr=2&h=365.31&w=230",
+            price:"INR 2,572.03 (Extra 25% Off)",
+            desc:"Holiday Deal",
+            rating:"4.2",
+            total:"107"
+        },
+        {
+            name:"NordStorm",
+            img:"https://n.nordstrommedia.com/id/sr3/2e5ca171-947d-45c5-8521-a6e81d74cc98.jpeg?q=45&dpr=2&h=365.31&w=230",
+            price:"INR 2,224.74 (Extra 25% Off)",
+            desc:"Limited-Time Sale",
+            rating:"3.8",
+            total:"3"
+        },
+        {
+            name:"NordStorm",
+            img:"https://n.nordstrommedia.com/id/sr3/93bd70a4-e878-4bbe-b58b-623e9d6aa7db.jpeg?q=45&dpr=2&h=365.31&w=230",
+            price:"INR 4513.98 (Extra 25% Off)",
+            desc:"Holiday Deal",
+            rating:"4.2",
+            total:"11"
+        }
+    ]
+
+    const Forher= [
+        {
+            name:"Open Edit",
+            img:"https://n.nordstrommedia.com/id/sr3/77026c83-df2e-42a7-a93f-1f5e5ca61ef3.jpeg?q=45&dpr=2&h=365.31&w=230",
+            price:"INR 1,741.44 - INR 3,869.86",
+            desc:"Limited-Time Sale",
+            rating:"4",
+            total:"28"
+        },
+        {
+            name:"Free People",
+            img:"https://n.nordstrommedia.com/id/sr3/d9ffa3aa-df57-4bc8-b41a-b841f09fe595.jpeg?q=45&dpr=2&h=365.31&w=230",
+            price:"INR 3,404.62 - INR 7,567.73",
+            desc:"Limited-Time Sale",
+            rating:"4.1",
+            total:"4"
+        },
+        {
+            name:"1.State",
+            img:"https://n.nordstrommedia.com/id/sr3/9f7f66fd-c5bb-4000-8888-32014d1d9f32.jpeg?q=45&dpr=2&h=365.31&w=230",
+            price:"INR 2,572.03 (Extra 25% Off)",
+            desc:"Holiday Deal",
+            rating:"4.2",
+            total:"107"
+        },
+        {
+            name:"Open Edit",
+            img:"https://n.nordstrommedia.com/id/sr3/27ec52c3-bfbb-43b5-a4e6-16447cbcfa6c.jpeg?q=45&dpr=2&h=365.31&w=230",
+            price:"INR 2,224.74 (Extra 25% Off)",
+            desc:"Limited-Time Sale",
+            rating:"3.8",
+            total:"3"
+        },
+        {
+            name:"NordStorm",
+            img:"https://n.nordstrommedia.com/id/sr3/5fd7f595-e5bc-49f0-972d-e0cbb2d008a3.jpeg?q=45&dpr=2&h=365.31&w=230",
+            price:"INR 4513.98 (Extra 25% Off)",
+            desc:"Holiday Deal",
+            rating:"4.2",
+            total:"11"
+        }
+    ]
+    const Forhim=[
+        {
+            name:"UCGR",
+            img:"https://n.nordstrommedia.com/id/sr3/7aa9e8d2-2296-41ab-b5e7-cf2f4e806ebf.jpeg?q=45&dpr=2&h=365.31&w=230",
+            price:"INR 3,869.86 (Extra 25% Off)",
+            desc:"Limited-Time Sale",
+            rating:"3.9",
+            total:"6"
+        },
+        {
+            name:"UCGR",
+            img:"https://n.nordstrommedia.com/id/sr3/4b0e00a9-9fc5-4ef9-8187-9d78e1bbd315.jpeg?q=45&dpr=2&h=365.31&w=230",
+            price:"INR 6,191.78 (Extra 25% Off)",
+            desc:"Limited-Time Sale",
+            rating:"4.1",
+            total:"4"
+        },
+        {
+            name:"Robert Barakett",
+            img:"https://n.nordstrommedia.com/id/sr3/01a98d64-1631-4a6e-bf41-e60da51f18c8.jpeg?q=45&dpr=2&h=365.31&w=230",
+            price:"INR 2,241.08 - INR 5,976.78",
+            desc:"Limited-Time Sale",
+            rating:"4.3",
+            total:"558"
+        },
+        {
+            name:"Nike",
+            img:"https://n.nordstrommedia.com/id/sr3/f9c87feb-d902-45ee-9b5c-39631fd74132.jpeg?q=45&dpr=2&h=365.31&w=230",
+            price:"INR 4,578.47 - INR 8,599.69",
+            desc:"Limited-Time Sale",
+            rating:"3.8",
+            total:"3"
+        },
+        {
+            name:"Zella",
+            img:"https://n.nordstrommedia.com/id/sr3/504f552b-d922-4382-bb9f-2541f0d52986.jpeg?q=45&dpr=2&h=365.31&w=230",
+            price:"INR 644.12 - INR 1,885.91",
+            desc:"Limited-Time Sale",
+            rating:"3.5",
+            total:"27"
+        }
+    ]
+    const Forkids=[
+        {
+            name:"Johanna Ortiz",
+            img:"https://n.nordstrommedia.com/id/sr3/55e86865-18ab-482f-92e8-262f4dced4ea.jpeg?q=45&dpr=2&h=365.31&w=230",
+            price:"INR 3,869.86 (Extra 25% Off)",
+            desc:"Limited-Time Sale",
+            rating:"3.9",
+            total:"6"
+        },
+        {
+            name:"PALMES",
+            img:"https://n.nordstrommedia.com/id/sr3/f5bcbbd5-aba5-422e-8d84-8f9d6a9f5062.jpeg?q=45&dpr=2&h=365.31&w=230",
+            price:"INR 1,932.35 (Extra 25% Off)",
+            desc:"Limited-Time Sale",
+            rating:"4.1",
+            total:"4"
+        },
+        {
+            name:"Johanna Ortiz",
+            img:"https://n.nordstrommedia.com/id/sr3/c2321c95-4b43-4c8b-9abc-8ee79957a138.jpeg?q=45&dpr=2&h=365.31&w=230",
+            price:"INR 38,698.60 (40% Off)",
+            desc:"Limited-Time Sale",
+            rating:"4.3",
+            total:"558"
+        },
+        {
+            name:"KENZO",
+            img:"https://n.nordstrommedia.com/id/sr3/60bc9ce2-994a-4dca-8c3b-846802d6104d.jpeg?q=45&dpr=2&h=365.31&w=230",
+            price:"INR 5,030.82 (Extra 25% Off)",
+            desc:"Limited-Time Sale",
+            rating:"3.8",
+            total:"3"
+        },
+        {
+            name:"Johanna Ortiz",
+            img:"https://n.nordstrommedia.com/id/sr3/845b1910-9303-4a82-9f12-fde1ea346a45.jpeg?q=45&dpr=2&h=365.31&w=230",
+            price:"INR 64,497.67 (40% Off)",
+            desc:"Limited-Time Sale",
+            rating:"3.5",
+            total:"27"
+        }
+    ]
+    const Forteen=[
+        {
+            name:"UCGR",
+            img:"https://n.nordstrommedia.com/id/sr3/a8055a3f-2507-4a04-9fc9-07ec2c21fd12.jpeg?q=45&dpr=2&h=365.31&w=230",
+            price:"INR 5,803.93 (Extra 25% Off)",
+            desc:"Limited-Time Sale",
+            rating:"3.9",
+            total:"6"
+        },
+        {
+            name:"UCGR",
+            img:"https://n.nordstrommedia.com/id/sr3/4b3cc4d4-d7e8-49fd-ab37-ddfa1398d2a1.jpeg?q=45&dpr=2&h=365.31&w=230",
+            price:"INR 5,158.95 (Extra 25% Off)",
+            desc:"Limited-Time Sale",
+            rating:"4.1",
+            total:"4"
+        },
+        {
+            name:"Robert Barakett",
+            img:"https://n.nordstrommedia.com/id/sr3/effd3857-de3b-40f3-b09f-2488a34c56cb.jpeg?q=45&dpr=2&h=365.31&w=230",
+            price:"INR 2,579.05 - INR 5,159.81",
+            desc:"Limited-Time Sale",
+            rating:"4.3",
+            total:"558"
+        },
+        {
+            name:"Tucker + Tate",
+            img:"https://n.nordstrommedia.com/id/sr3/78d26234-366d-42fe-b784-2909f28d7882.jpeg?q=45&dpr=2&h=365.31&w=230",
+            price:"INR 4,89.32 - INR 1,633.94",
+            desc:"Limited-Time Sale",
+            rating:"3.8",
+            total:"3"
+        },
+        {
+            name:"Nordstrom",
+            img:"https://n.nordstrommedia.com/id/sr3/95440173-d2e5-4f6e-97d7-ed9cc23423f1.jpeg?q=45&dpr=2&h=365.31&w=230",
+            price:"INR 1,885.92 (Extra 25% Off)",
+            desc:"Limited-Time Sale",
+            rating:"3.5",
+            total:"27"
+        }
+    ]
+    const Foreveryone=[
+        {
+            name:"Lancome",
+            img:"https://n.nordstrommedia.com/id/sr3/af91b8c3-81f6-4e40-9386-8afbb6e94ef3.jpeg?q=45&dpr=2&h=365.31&w=230",
+            price:"INR 6,707.76 - INR 19,779.29",
+            desc:"Limited-Time Sale",
+            rating:"3.9",
+            total:"6"
+        },
+        {
+            name:"Kiehl's since 1851",
+            img:"https://n.nordstrommedia.com/id/sr3/2c7bf1ba-589d-4187-90fb-b99ffcec946c.jpeg?q=45&dpr=2&h=365.31&w=230",
+            price:"INR 2,407.91 (30% Off)",
+            desc:"Limited-Time Sale",
+            rating:"4.1",
+            total:"4"
+        },
+        {
+            name:"Voluspa",
+            img:"https://n.nordstrommedia.com/id/sr3/ed308a56-a2f6-406b-a196-5b9a64238a90.jpeg?q=45&dpr=2&h=365.31&w=230",
+            price:"INR 1,375.95 - INR 2,201.52",
+            desc:"Limited-Time Sale",
+            rating:"4.3",
+            total:"558"
+        },
+        {
+            name:"Lake & Skyke",
+            img:"https://n.nordstrommedia.com/id/sr3/c7124e24-a322-42d1-8679-fe64657aff9b.jpeg?q=45&dpr=2&h=365.31&w=230",
+            price:"INR 2,321.92 - INR 6,320.77",
+            desc:"Limited-Time Sale",
+            rating:"3.8",
+            total:"3"
+        },
+        {
+            name:"Kiehl's since 1851",
+            img:"https://n.nordstrommedia.com/id/sr3/5e92e0af-c1f7-4330-8b04-a196710751c7.jpeg?q=45&dpr=2&h=365.31&w=230",
+            price:"INR 2,889.50 (30% Off)",
+            desc:"Limited-Time Sale",
+            rating:"3.5",
+            total:"27"
+        }
+    ]
+
     return <Box>
         <Box w="95%" m="auto" display="flex" justifyContent="space-between" p="40px 0px 60px 0px">
             <Box w="25%">
@@ -48,6 +513,102 @@ function Homepage(){
                 </Box>
             </Box>
         </Box>
+        <Box w="95%" m="auto">
+            <Box display="flex" justifyContent="space-between" alignItems="center">
+                <Text color="gray.700" fontSize="3xl">Deals You'll Love</Text>
+                <Button p="20px 15px" _hover={{border:"1px solid  white", bg:"gray.200"}} border="1px solid black" bg="none" rounded="0">View All Women</Button>
+            </Box>
+            <Tabs>
+                <TabList>
+                    <Tab>Women</Tab>
+                    <Tab>Men</Tab>
+                    <Tab>Designer</Tab>
+                    <Tab>Kids</Tab>
+                    <Tab>Beauty</Tab>
+                    <Tab>Home</Tab>
+                </TabList>
+                <TabPanels>
+                    <TabPanel>
+                        <Box display="flex">
+                            {Women && Women.map((el)=>{
+                                return  <Box>
+                                        <Image src={el.img} alt="img" />
+                                        <Text color="gray.600" fontWeight="400" fontSize="lg">{el.name}</Text>
+                                        <Text fontWeight="600" color="gray.700" fontSize="sm">{el.desc}</Text>
+                                        <Text fontWeight="400" fontSize="sm">{el.price}</Text>
+                                        <Text fontWeight="400" fontSize="sm">{el.rating} ({el.total})</Text>
+                                    </Box>
+                            })}
+                        </Box>
+                    </TabPanel>
+                    <TabPanel>
+                        <Box display="flex">
+                            {Men && Men.map((el)=>{
+                                return  <Box>
+                                        <Image src={el.img} alt="img" />
+                                        <Text color="gray.600" fontWeight="400" fontSize="lg">{el.name}</Text>
+                                        <Text fontWeight="600" color="gray.700" fontSize="sm">{el.desc}</Text>
+                                        <Text fontWeight="400" fontSize="sm">{el.price}</Text>
+                                        <Text fontWeight="400" fontSize="sm">{el.rating} ({el.total})</Text>
+                                    </Box>
+                            })}
+                        </Box>
+                    </TabPanel>
+                    <TabPanel>
+                        <Box display="flex">
+                            {Designer && Designer.map((el)=>{
+                                return  <Box>
+                                        <Image src={el.img} alt="img" />
+                                        <Text color="gray.600" fontWeight="400" fontSize="lg">{el.name}</Text>
+                                        <Text fontWeight="600" color="gray.700" fontSize="sm">{el.desc}</Text>
+                                        <Text fontWeight="400" fontSize="sm">{el.price}</Text>
+                                        <Text fontWeight="400" fontSize="sm">{el.rating} ({el.total})</Text>
+                                    </Box>
+                            })}
+                        </Box>
+                    </TabPanel>
+                    <TabPanel>
+                        <Box display="flex">
+                            {Kids && Kids.map((el)=>{
+                                return  <Box>
+                                        <Image src={el.img} alt="img" />
+                                        <Text color="gray.600" fontWeight="400" fontSize="lg">{el.name}</Text>
+                                        <Text fontWeight="600" color="gray.700" fontSize="sm">{el.desc}</Text>
+                                        <Text fontWeight="400" fontSize="sm">{el.price}</Text>
+                                        <Text fontWeight="400" fontSize="sm">{el.rating} ({el.total})</Text>
+                                    </Box>
+                            })}
+                        </Box>
+                    </TabPanel>
+                    <TabPanel>
+                        <Box display="flex">
+                            {Beauty && Beauty.map((el)=>{
+                                return  <Box>
+                                        <Image src={el.img} alt="img" />
+                                        <Text color="gray.600" fontWeight="400" fontSize="lg">{el.name}</Text>
+                                        <Text fontWeight="600" color="gray.700" fontSize="sm">{el.desc}</Text>
+                                        <Text fontWeight="400" fontSize="sm">{el.price}</Text>
+                                        <Text fontWeight="400" fontSize="sm">{el.rating} ({el.total})</Text>
+                                    </Box>
+                            })}
+                        </Box>
+                    </TabPanel>
+                    <TabPanel>
+                        <Box display="flex">
+                            {Home && Home.map((el)=>{
+                                return  <Box>
+                                        <Image src={el.img} alt="img" />
+                                        <Text color="gray.600" fontWeight="400" fontSize="lg">{el.name}</Text>
+                                        <Text fontWeight="600" color="gray.700" fontSize="sm">{el.desc}</Text>
+                                        <Text fontWeight="400" fontSize="sm">{el.price}</Text>
+                                        <Text fontWeight="400" fontSize="sm">{el.rating} ({el.total})</Text>
+                                    </Box>
+                            })}
+                        </Box>
+                    </TabPanel>
+                </TabPanels>
+            </Tabs>
+        </Box>
         <Box w="95%" display="flex" m="auto" alignItems="center">
                 <Image position="relative" src="https://n.nordstrommedia.com/id/b08bf521-59ce-4e71-a28b-a84486ebc295.jpeg?h=700&w=1608" alt="img" />
             <Box w="26%" position="absolute" right="8%" textAlign="left">
@@ -68,9 +629,122 @@ function Homepage(){
                 </Box>
             </Box>
         </Box>
-        <Box w="95%" m="auto">
+        <Box w="95%" position="relative" display="flex" m="auto" alignItems="center" mb="40px" color="white">
+                <Image src="https://n.nordstrommedia.com/id/09cacbfa-f0b6-4f7a-b141-6fa66e0aedba.jpeg?h=700&w=1608" alt="img" />
+            <Box w="25%" color="black" position="absolute" bottom="2%" right="4%">
+                <Text color="black" fontWeight="400" fontSize="14px">Merci Milo founder Caroline Rodrigues is embracing all the coziness of the holidays—see how she unwinds and the gifts she suggests for every homebody on your list.</Text>
+                <Link textDecoration="underline" mr="10px" fontSize="16px">Shop Cozy Gifts</Link>
+                <Link textDecoration="underline" fontSize="16px">Explore Caroline's Picks</Link>
+            </Box>
+        </Box>
+        <Box w="95%" m="auto" mb="60px" mt="70px">
             <Image mb="40px" src="https://n.nordstrommedia.com/id/5ec3d3de-9e8c-4317-bc28-3b42b503268e.png?h=17&w=1608" alt="img" />
-            <Text fontSize="3xl">Trending Now</Text>
+            <Box display="flex" justifyContent="space-between" alignItems="center">
+                <Text color="gray.700" fontSize="3xl">Gifts by Recipient</Text>
+                <Button p="20px 15px" _hover={{border:"1px solid  white", bg:"gray.200"}} border="1px solid black" bg="none" rounded="0">View All Gifts For Her</Button>
+            </Box>
+            <Tabs>
+                <TabList>
+                    <Tab>Gifts For Her</Tab>
+                    <Tab>Gifts For Him</Tab>
+                    <Tab>Gifts For Kids</Tab>
+                    <Tab>Gifts For Teens</Tab>
+                    <Tab>Gifts For Everyone</Tab>
+                </TabList>
+                <TabPanels>
+                    <TabPanel>
+                        <Box display="flex">
+                            {Forher && Forher.map((el)=>{
+                                return  <Box>
+                                        <Image src={el.img} alt="img" />
+                                        <Text color="gray.600" fontWeight="400" fontSize="lg">{el.name}</Text>
+                                        <Text fontWeight="600" color="gray.700" fontSize="sm">{el.desc}</Text>
+                                        <Text fontWeight="400" fontSize="sm">{el.price}</Text>
+                                        <Text fontWeight="400" fontSize="sm">{el.rating} ({el.total})</Text>
+                                    </Box>
+                            })}
+                        </Box>
+                    </TabPanel>
+                    <TabPanel>
+                        <Box display="flex">
+                            {Forhim && Forhim.map((el)=>{
+                                return  <Box>
+                                        <Image src={el.img} alt="img" />
+                                        <Text color="gray.600" fontWeight="400" fontSize="lg">{el.name}</Text>
+                                        <Text fontWeight="600" color="gray.700" fontSize="sm">{el.desc}</Text>
+                                        <Text fontWeight="400" fontSize="sm">{el.price}</Text>
+                                        <Text fontWeight="400" fontSize="sm">{el.rating} ({el.total})</Text>
+                                    </Box>
+                            })}
+                        </Box>
+                    </TabPanel>
+                    <TabPanel>
+                        <Box display="flex">
+                            {Forkids && Forkids.map((el)=>{
+                                return  <Box>
+                                        <Image src={el.img} alt="img" />
+                                        <Text color="gray.600" fontWeight="400" fontSize="lg">{el.name}</Text>
+                                        <Text fontWeight="600" color="gray.700" fontSize="sm">{el.desc}</Text>
+                                        <Text fontWeight="400" fontSize="sm">{el.price}</Text>
+                                        <Text fontWeight="400" fontSize="sm">{el.rating} ({el.total})</Text>
+                                    </Box>
+                            })}
+                        </Box>
+                    </TabPanel>
+                    <TabPanel>
+                        <Box display="flex">
+                            {Forteen && Forteen.map((el)=>{
+                                return  <Box>
+                                        <Image src={el.img} alt="img" />
+                                        <Text color="gray.600" fontWeight="400" fontSize="lg">{el.name}</Text>
+                                        <Text fontWeight="600" color="gray.700" fontSize="sm">{el.desc}</Text>
+                                        <Text fontWeight="400" fontSize="sm">{el.price}</Text>
+                                        <Text fontWeight="400" fontSize="sm">{el.rating} ({el.total})</Text>
+                                    </Box>
+                            })}
+                        </Box>
+                    </TabPanel>
+                    <TabPanel>
+                        <Box display="flex">
+                            {Foreveryone && Foreveryone.map((el)=>{
+                                return  <Box>
+                                        <Image src={el.img} alt="img" />
+                                        <Text color="gray.600" fontWeight="400" fontSize="lg">{el.name}</Text>
+                                        <Text fontWeight="600" color="gray.700" fontSize="sm">{el.desc}</Text>
+                                        <Text fontWeight="400" fontSize="sm">{el.price}</Text>
+                                        <Text fontWeight="400" fontSize="sm">{el.rating} ({el.total})</Text>
+                                    </Box>
+                            })}
+                        </Box>
+                    </TabPanel>
+                </TabPanels>
+            </Tabs>
+        </Box>
+        <Box w="95%" m="40px auto" mt="30px">
+            <Image mb="40px" src="https://n.nordstrommedia.com/id/5ec3d3de-9e8c-4317-bc28-3b42b503268e.png?h=17&w=1608" alt="img" />
+            <Text color="gray.700" m="50px" fontSize="2xl">GIFTS BY RECIPIENT</Text>
+            <Image mt="20px" src="https://n.nordstrommedia.com/id/0c7312a9-d6ec-4235-bdf4-15b01fc042be.jpeg?h=395&w=1608" alt="img" />
+            <Box display="flex" justifyContent="space-between" textAlign="center">
+                <Box w="20%">
+                    <Text color="gray.700" fontSize="18px">For Her</Text>
+                </Box>
+                <Box w="20%">
+                    <Text color="gray.700" fontSize="18px">For Him</Text>
+                </Box>
+                <Box w="20%">
+                    <Text color="gray.700" fontSize="18px">For Kids</Text>
+                </Box>
+                <Box w="20%">
+                    <Text color="gray.700" fontSize="18px">For Teens</Text>
+                </Box>
+                <Box w="20%">
+                    <Text color="gray.700" fontSize="18px">All Gifts</Text>
+                </Box>
+            </Box>
+        </Box>
+        <Box w="95%" m="auto" mb="55px" mt="50px">
+            <Image mb="40px" src="https://n.nordstrommedia.com/id/5ec3d3de-9e8c-4317-bc28-3b42b503268e.png?h=17&w=1608" alt="img" />
+            <Text fontSize="3xl" m="50px 0px">Trending Now</Text>
             <Box display="flex" alignItems="center" m="20px auto">
                 <Image position="relative" src="https://n.nordstrommedia.com/id/ca2fbe1a-8500-4018-bb61-40e88bb3887b.jpeg?h=700&w=1608" alt="img" />
                 <Box w="26%" position="absolute" right="8%" textAlign="left">
@@ -107,7 +781,7 @@ function Homepage(){
                 </Box>
             </Box>
         </Box>
-        <Box w="95%" m="40px auto">
+        <Box w="95%" m="40px auto" mt="100px">
             <Image mb="40px" src="https://n.nordstrommedia.com/id/5ec3d3de-9e8c-4317-bc28-3b42b503268e.png?h=17&w=1608" alt="img" />
             <Text color="gray.700" fontSize="2xl">SERVICES & EVENTS</Text>
             <Box w="95%" m="auto" display="flex" justifyContent="space-between" textAlign="left" mt="50px">
@@ -138,7 +812,7 @@ function Homepage(){
                 </Box>
             </Box>
         </Box>
-        <Box w="95%" display="flex" m="auto" alignItems="center" color="white">
+        <Box w="95%" display="flex" m="auto" alignItems="center" mt="80px" color="white">
                 <Image position="relative" src="https://n.nordstrommedia.com/id/50731a37-8fb1-4ae1-bd40-4597e2266297.jpeg?h=200&w=1608" alt="img" />
             <Box w="50%" position="absolute" right="8%" textAlign="left">
                 <Text color="white" fontSize="22px">New Episodes Every Other Week</Text>
@@ -146,8 +820,8 @@ function Homepage(){
                 <Link textDecoration="underline" fontSize="16px">Learn More</Link>
             </Box>
         </Box>
-        <Box w="95%" m="40px auto">
-            <Image mb="40px" src="https://n.nordstrommedia.com/id/5ec3d3de-9e8c-4317-bc28-3b42b503268e.png?h=17&w=1608" alt="img" />
+        <Box w="95%" m="80px auto">
+            <Image mb="60px" src="https://n.nordstrommedia.com/id/5ec3d3de-9e8c-4317-bc28-3b42b503268e.png?h=17&w=1608" alt="img" />
             <Text color="gray.700" fontSize="2xl">SHOP BY CATEGORY</Text>
             <Box display="flex" justifyContent="space-between" mt="50px" textAlign="center">
                 <Box w="16%">
@@ -177,8 +851,8 @@ function Homepage(){
             </Box>
         </Box>
         <Box w="95%" m="40px auto">
-            <Image mb="40px" src="https://n.nordstrommedia.com/id/5ec3d3de-9e8c-4317-bc28-3b42b503268e.png?h=17&w=1608" alt="img" />
-            <Text color="gray.700" fontSize="2xl">SERVICES & EVENTS</Text>
+            <Text color="gray.700" fontSize="2xl">CURRENTLY LOVING</Text>
+            <Text color="gray.700" fontWeight="400" fontSize="15px">Explore favorite looks from Instagram. Tag @Nordstrom to show us your finds.</Text>
             <Box w="95%" m="auto" display="flex" justifyContent="space-between" textAlign="left" mt="50px">
                 <Box className="container">
                     <Image src="https://cdn.dashhudson.com/media/640/1634145375.908124478742.jpeg" alt="Avatar" className="image" w="100%"/>

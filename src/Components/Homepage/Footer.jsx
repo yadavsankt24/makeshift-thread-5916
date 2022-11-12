@@ -1,11 +1,20 @@
-import { Box, Link, Image, Text, Icon } from "@chakra-ui/react";
+import { Box, Link, Image, Text, Icon, Input, Button } from "@chakra-ui/react";
 import { FcSmartphoneTablet } from 'react-icons/fc';
 import { AiFillInstagram } from 'react-icons/ai';
 import { BsPinterest, BsTwitter, BsFacebook } from 'react-icons/bs';
 import { GrAdd } from 'react-icons/gr';
 
 function Footer(){
-    return <Box bg="gray.100" p="40px 0px">
+    return <Box>
+        <Box w="90%" m="auto" display="flex" justifyContent="space-between" p="60px 0px 40px 0px">
+            <Box></Box>
+            <Box display="flex" gap="10px" alignItems="center">
+                <Text fontWeight="400" fontSize="13px">Get Email Updates:</Text>
+                <Input rounded="0px" w="270px" placeholder="Email Address" />
+                <Button rounded="0px" bg="black" color="white" p="0px 80px">Sign Up</Button>
+            </Box>
+        </Box>
+        <Box bg="#f5f6f7" p="40px 0px">
         <Box w="90%" m="auto">
             <Box w="95%" display="grid" gridTemplateColumns="repeat(6, 1fr)" textAlign="left">
                 <Box display="grid" gridTemplateColumns="repeat(1, 1fr)" gap="10px">
@@ -82,6 +91,7 @@ function Footer(){
                 <Text fontWeight="200" fontSize="13px">©2022 Nordstrom, Inc.</Text>
             </Box>
         </Box>
+    </Box>
     </Box>
 }
 
