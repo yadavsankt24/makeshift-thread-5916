@@ -6,7 +6,7 @@ Welcome To Our Project👋
 
 1. Sanket Yadav
 2. Sankalp Patel
-3. Sanghamitra
+3. Sanghamitra Satpathy
 4. Ramkrishna Prabhu
 
 
