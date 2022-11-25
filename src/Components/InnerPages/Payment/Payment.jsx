@@ -21,7 +21,7 @@ const Payment = () => {
   // console.log("formData:", formData);
   const navigate = useNavigate();
 
-  // console.log(formData.fname,"namehere")
+  console.log(`fname`,formData.fname)
 
   setTimeout(() => setIsHide(false), 5000);
 
@@ -32,7 +32,7 @@ const Payment = () => {
           <img
             style={{ width: "80px" }}
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYfD7SshGzpdEJQU6y9ViAWpuHHXI97tTNEQ&usqp=CAU"
-          />
+         alt="Matrix" />
           <h1>Thank You!</h1>
           <h4>You have Placed the Order {"\n"} Successfully</h4>
           <p>
@@ -40,14 +40,14 @@ const Payment = () => {
             will be Delivery soon
           </p>
 
-          <p className={styles.add}>Name: {formData.fname}</p>
+          {/* <p className={styles.add}>Name: {formData.fname}</p> */}
           {/* <p>{formData.fname}</p> */}
 
-          <p className={styles.add}>Delivery address: {formData.address}</p>
+          {/* <p className={styles.add}>Delivery address: {formData.address}</p> */}
           <p></p>
 
           <h4>
-            Happy Shopping {formData.fname} {formData.lname}
+            Happy Shopping
           </h4>
           <button className={styles.button} onClick={() => navigate("/")}>
             Home

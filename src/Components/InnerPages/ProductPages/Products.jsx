@@ -579,10 +579,6 @@ const Products = () => {
         <select onChange={handlesort} className={styles.sort}>
           <option value="asc">Sort by price: low to high</option>
           <option value="desc">Sort by price: high to low</option>
-          <option value="">Sort by featured</option>
-          <option value="">Sort by newest</option>
-          <option value="">Sort by percent off</option>
-          <option value="">Sort by customer rating</option>
         </select>
       </div>
 
