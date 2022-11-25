@@ -44,6 +44,7 @@ Nordstrom, Inc. (JWN) is publicly traded on the NYSE.
 * Womens, Mens and Kids page 
 * Product and Checkout page 
 * About Section
+* Final Order Placed.  
 
 
 ### Functionalities :
