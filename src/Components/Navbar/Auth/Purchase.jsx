@@ -26,6 +26,7 @@ const Purchase = () => {
       <Side />
       <div>
         <h5>Purchase</h5>
+{/* feedback: fw20_0209- use select loop*/}}
         <p>
           0 Purchase in
           <select name="" id="" style={{ marginLeft: "10px", padding: "8px" }}>
