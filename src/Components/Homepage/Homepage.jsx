@@ -2,7 +2,7 @@
 import Megha from "../Meghamenu/Megha";
 import "./Homepage.css";
 
-
+{/* feedback: fw20_0209 and fw20_0591 - Remove the commented code if not needed it is hampering the readability of the code */}
 // function Homepage(){
 
 //     return <Box>
@@ -221,7 +221,7 @@ import "./Homepage.css";
 
 
 function Homepage(){
-
+    {/* feedback: fw20_0209 and fw20_0591 - - Keep mock data out of the component, you can use JSON file and load them when you render the data.*/}
     const Women= [
         {
             name:"Open Edit",
@@ -738,6 +738,7 @@ function Homepage(){
                 <Button p="20px 15px" _hover={{border:"1px solid  white", bg:"gray.200"}} border="1px solid black" bg="none" rounded="0">View All Women</Button>
             </Box>
             <Tabs>
+                    {/* feedback: fw20_0591- use loops for listing similar elements*/}
                 <TabList padding="5px" fontSize="large"   display="flex" justifyContent="space-around">
                     <Tab fontWeight="bold" color="teal" border="none">Women</Tab>
                     <Tab fontWeight="bold" color="teal" border="none">Men</Tab>
@@ -1000,16 +1001,20 @@ function Homepage(){
                 </Box>
             </Box>
         </Box>
+                                                                                             
         <Box w="95%" m="40px auto" mt="100px">
             <Image mb="40px" src="https://n.nordstrommedia.com/id/5ec3d3de-9e8c-4317-bc28-3b42b503268e.png?h=17&w=1608" alt="img" />
             <Text color="gray.700" fontSize="2xl">SERVICES & EVENTS</Text>
+                                                                                                    
             <Box w="95%" m="auto" display="flex" justifyContent="space-between" textAlign="left" mt="50px">
+                                                                                                                                                                                       
                 <Box w="25%">
                     <Image src="https://n.nordstrommedia.com/id/55525828-6ec1-4b50-9792-c556171a7525.jpeg?h=365&w=402" alt="img" />
                     <Text color="gray.700" fontSize="20px">The Gift of Choice</Text>
                     <Text lineHeight="20px" w="80%" fontWeight="400" fontSize="14px">Get them what they really want with a Nordstrom Gift Card.</Text>
                     <Link textDecoration="underline" fontSize="16px">Gift Cards & eGift Cards</Link>
                 </Box>
+                
                 <Box w="25%">
                     <Image src="https://n.nordstrommedia.com/id/1eded89e-7279-4606-8944-93e354595e87.jpeg?h=365&w=402" alt="img" />
                     <Text color="gray.700" fontSize="20px">Gift Wrapping</Text>
@@ -1040,6 +1045,8 @@ function Homepage(){
             </Box>
         </Box>
         <Box w="95%" m="80px auto">
+                                                                                                    {/*feedback: fw20_0591 - use URLs from constant file */}
+                    {/* feedback: fw20_0591 - Move static text out of component and use constant file instead*/}
             <Image mb="60px" src="https://n.nordstrommedia.com/id/5ec3d3de-9e8c-4317-bc28-3b42b503268e.png?h=17&w=1608" alt="img" />
             <Text color="gray.700" fontSize="2xl">SHOP BY CATEGORY</Text>
             <Box display="flex" justifyContent="space-between" mt="50px" textAlign="center">
