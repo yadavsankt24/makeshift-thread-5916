@@ -28,6 +28,7 @@ const Beauty = () => {
       <div className={styles.topdiv}>
         <div className={styles.sidebar}>
           <h3>Flash Events</h3>
+{/* feedback: fw20_0209 - use loops for listing similar elements */}
           <Link to="/flash/women">Women's styles Events </Link>
           <Link to="/flash/mens">Men's styles Events</Link>
           <Link to="/flash/kids">kid's styles Events </Link>
@@ -48,6 +49,7 @@ const Beauty = () => {
 
         <div className={styles.women}>
           <h2>Women's styles Events</h2>
+        {/* feedback: fw20_0209 - use URLs from constant file*/}
           <img
             className={styles.img}
             src="https://n.nordstrommedia.com/id/cc3b28d5-08ef-440d-b791-1e46d7ab48a1.png?h=185&w=1560"
