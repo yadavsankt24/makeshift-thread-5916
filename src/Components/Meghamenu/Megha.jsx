@@ -3,6 +3,10 @@ import "./megamenu.css";
 import { Link } from "react-router-dom";
 import {FiGift} from "react-icons/fi"
 
+// feedback: fw20_0209 - very big component and unable to check everything
+// some tips: you can club similar components into one and pass the dynamic config to it
+// use loops to render similar elements
+// There is a scope of resuabilty
 const Megha = () => {
   const [hover, setHover] = React.useState(false);
   return (
