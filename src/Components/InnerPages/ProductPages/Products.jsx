@@ -69,6 +69,7 @@ const Products = () => {
         <div>
           <div>
             {/* side bar div */}
+{/* feedback: fw20_0209 and fw17_0058 - don't use hardcoded values*/}
             <div className={styles.sidebar__1}>
               <Navigation
                 onSelect={({ itemId }) => {}}
