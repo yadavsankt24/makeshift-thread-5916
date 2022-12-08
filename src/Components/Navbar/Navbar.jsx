@@ -78,6 +78,7 @@ const Navbar = () => {
           </div>
 
           <div className={styles.relative_position}>
+            {/* feedback: fw20_0209 - You can create svg component*/}
             <span style={{ position: "absolute" }}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
