@@ -6,6 +6,7 @@ import styles from "./Flash.module.css";
 import kids from "./Data/kids.json";
 import { Link, useNavigate } from "react-router-dom";
 
+{/* feedback - - I have seen similar components i.e they are doing almost similar work. can we reuse them? for ex: kids.jsx, home.jsx and flash.jsx.*/}
 const Kids = () => {
   const Data = kids.kids;
   //const data = useSelector((state) => state.Data.data)

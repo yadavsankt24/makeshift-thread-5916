@@ -42,6 +42,8 @@ function SignUp()
   //     })
   //  }
    
+  // feedback: fw17_0058 - Don't use image like this
+  // remove the commented code
     return (
         <div className="signup-optimus">
         <div>

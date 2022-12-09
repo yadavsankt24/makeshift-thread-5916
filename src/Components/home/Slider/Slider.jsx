@@ -21,6 +21,8 @@ let secondslide = [
   "https://n.nordstrommedia.com/id/c1eb58ac-edc2-4223-9440-5175c5fb8a3d.jpeg?h=200&w=1608",
 ];
 
+// feedback: fp02_094 - can we create separate components for below function?
+
 const Slideshow = () => {
   var settings = {
     dots: false,

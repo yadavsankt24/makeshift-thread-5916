@@ -64,6 +64,7 @@ export default function Details() {
                 Get active in this sporty, raglan-sleeve T-shirt that takes you
                 seamlessly from gym to street.
               </Text>
+{/*feedback: fp02_094 - use loops for listing similar elements */}
               <Text fontSize={"xs"} ml="">
                 <ul align={"left"}>
                   <li>28" length (size Medium)</li>
@@ -127,6 +128,7 @@ export default function Details() {
               >
                 ZELLA
               </Text>
+{/*feedback: fp02_094 - Move static text to constant files, easy to maintain and keep the components light*/}
               <Text align={'left'} w='125%' fontSize={"xs"}>
                 Step into your training schedule and maximize the power of your
                 mind, body and energy. Stay focused, go further, be invincible

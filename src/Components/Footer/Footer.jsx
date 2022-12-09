@@ -41,6 +41,7 @@ function Footer() {
               Product Recalls
             </Link>
             <Box display="flex" gap="2px" alignItems="center">
+    {/* feedback: fw20_0209 - Never use the base64 encoded image directly into src*/}
               <Image
                 rounded="50%"
                 w="4"
@@ -82,6 +83,7 @@ function Footer() {
               Nordy Podcast
             </Link>
           </Box>
+{/* feedback: fw20_0209 - avoid such repetitive elements, use loops*/}
           <Box display="grid" gridTemplateColumns="repeat(1, 1fr)">
             <Link fontWeight="bold" fontSize="15px">
               Stores & Services
