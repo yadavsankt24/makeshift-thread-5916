@@ -62,6 +62,7 @@ const Product = () => {
   );
 };
 
+// feedback: fp02_094 -  keep the styles out of component
 const Container = styled.div``;
 
 const Wrapper = styled.div`
