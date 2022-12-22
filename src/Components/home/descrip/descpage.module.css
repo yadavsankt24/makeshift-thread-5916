@@ -1,50 +1,68 @@
 .descpagemaindiv{
     display:flex;
+    width: 80%;
     justify-content:space-between;
-    /* border:1px solid black; */
-    margin-top:50px;
-    padding: 70px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+     /* border:1px solid black;  */
+    margin-top:3%;
+    margin-left: 9%;
+    padding: 10px;
 }
 
 .descimagediv{
     /* border:1px solid red; */
-    width: 40%;
+    width: 50%;
+    margin-left: 9%;
     height:auto
 }
 .descimagediv img{
     width:70%;
-    height:80%;
+    height:90%;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;}
 
 .descdetaildiv{
     /* border:1px solid rgb(0, 0, 0); */
-    width: 50%;
+    width: 55%;
     height:auto
 }
-
+.price{
+    color: red;
+}
+.title{
+    font-weight: bold;
+    /* font-style:italic ; */
+    color: black;
+}
 .selectTag{
     width:400px;
     height:44px;
     margin-bottom: 13px;
     border:2px solid whitesmoke;
-
+    padding: 10px; 
+    background-color:rgb(205, 238, 238);
+    
 }
 .selectTag:hover{
     border-bottom: 2.4px solid teal;
 }
-
-.Addbag{
-    width:400px;
-    height:40px;
-    background: #00819d;
-    border-color: #00819d;
-    color: #fff;
-    font-weight: 400;
-    text-align: center;
- 
-
+.cond{
+    width: 60%;
+    
+    margin-left: 0%;
 }
 
+.addbag{
+    width:400px;
+    height:50px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+
+}
+.container{
+    padding: 20px;
+}
 
 .checkoutpop{
     width:100px;
@@ -67,4 +85,37 @@
     background-color:white;
     border:1px solid #00819d;
 }
-
+.reactMg{
+    width: 28%;
+    height: auto;
+    margin-left: 25px;
+}
+.modal1{
+    margin-left: 100px;
+    
+}
+.modalbody{
+    height: 500px;
+    width: 95%;
+}
+.high{
+    padding-top : 10px;
+     text-align: center 
+}
+.firstDiv{
+    display: flex;
+    justify-content: space-between;
+}
+.secondDiv{
+    width: 172px;
+    height: 135px;
+}
+.image{
+    width: 96%;
+    height: 100%;
+}
+.disc{
+    width: 270px;
+    height: 130px;
+    margin-left: 10px;
+}

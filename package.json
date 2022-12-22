@@ -1,5 +1,5 @@
 {
-  "name": "Phoenix",
+  "name": "phoenix",
   "version": "0.1.0",
   "private": false,
   "dependencies": {
@@ -11,6 +11,7 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^14.4.3",
+    "axios": "^1.2.1",
     "bootstrap": "^5.2.3",
     "framer-motion": "^7.6.12",
     "glider-js": "^1.7.8",
