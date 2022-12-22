@@ -9,7 +9,7 @@ const Cart = () => {
   const data = useSelector((state) => state.Data.cartData);
   const length = data.length;
   const dispatch = useDispatch();
-  const [state, setState] = useState(false);
+
   const navigate = useNavigate();
 
 
@@ -28,11 +28,6 @@ const Cart = () => {
 
   console.log(final);
   const payment = () => {
-    // return <>
-    //       <LoadingSpin />
-
-    // </>
-
     navigate("/checkout");
   };
 

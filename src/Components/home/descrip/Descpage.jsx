@@ -1,63 +1,75 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import ReactImageMagnify from 'react-image-magnify';
 import CheckPop from "./CheckPop";
 import styles from "./descpage.module.css";
 
+
+
 const Descpage = () => {
-  // const Datades = useSelector((state) => state.Data.data);
+  
   const descData = useSelector((state) => state.Data.descriptionData);
   console.log(descData);
-  // const filterData = Datades.filter((item) => {
-  //   return item.title.includes("Men's Jean");
-  // });
-  // let descData = filterData[0];
-  // console.log(descData);
+
 
   return (
+    <div className={styles.container}>
+    
     <div className={styles.descpagemaindiv}>
-      <div className={styles.descimagediv}>
-        <img src={descData.thumbnail}></img>
-      </div>
+      <div className={styles.reactMg}>
+    <ReactImageMagnify {...{
+      smallImage: {
+          alt: 'Wristwatch by Ted Baker London',
+          isFluidWidth: true,
+          src:descData.thumbnail,
+      },
+      largeImage: {
+          src: descData.thumbnail,
+          width: 1100,
+          height: 500
+      }
+  }} />
+  </div>
 
       <div className={styles.descdetaildiv}>
-        <h3>{descData.title}</h3>
-        {/* <p>{descData.price.from.extracted}</p> */}
-        <p>{descData.shipping}</p>
-        <p>{descData.condition}</p>
+        <h3 className={styles.title}>{descData.title}</h3>
+       
+        <h1 className={styles.price}>Price :  {descData.price.raw}</h1>
+        <p >{descData.shipping}</p>
+        <p className={styles.cond}>{descData.condition}</p>
         {/* <p>{descData.extensions[0]}</p> */}
         <select className={styles.selectTag}>
           <option value="size">Size</option>
-          <option>5</option>
-          <option>6</option>
-          <option>7</option>
-          <option>8</option>
+          <option>xx-small</option>
+          <option>x-small</option>
+          <option>Small</option>
+          <option>Medium</option>
+          <option>Large</option>
+          <option>X-Large</option>
         </select>
-        <br></br>
-        <select className={styles.selectTag}>
-          <option>M(Medium)</option>
-          <option>HIGH</option>
-          <option>LARGE</option>
-          <option>EXTRA LARGE</option>
-        </select>
-        <br></br>
+        <br />
+        <br />
+       
 
         <select className={styles.selectTag}>
-          <option>Navy</option>
-          <option>Nude</option>
-          <option>Clear</option>
-          <option>Pink</option>
-        </select>
+          <option>Purple Mellow Gingham</option>
+          <option>Grey Heather</option>
+          <option>Black </option>
+          <option>Brown Brownie Animal Prints</option>
+          <option>Black Infinity</option>
+        </select><br /><br />
 
         <div>
           <div>Delivery</div>
-
-          {/* <div className={styles.Addbag}>Add to bag</div> */}
           <CheckPop data={descData} />
           <a href="#">Add to Wish List</a>
         </div>
       </div>
     </div>
+    </div>
   );
 };
 
 export default Descpage;
+
+
