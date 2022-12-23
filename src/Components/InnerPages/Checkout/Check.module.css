@@ -8,18 +8,7 @@
     /* border: 1px solid yellow; */
 }
 
-.left{
-/* margin: auto; */
-/* border: 1px solid red; */
-
-}
-
-.rigth{
-    /* border: 1px solid red; */
-    /* margin: auto; */
-}
-
-.checkdiv,.shipping,.gift,.contact,.nordstrom,.payment,.promotions,.review1{
+.checkdiv,.shipping,.gift,.contact,.nordstrom,.payment,.promotions{
     /* border: 1px solid black; */
     width: 550px;
     /* height: 200px; */
@@ -156,25 +145,25 @@ input[type=checkbox]{
 }
 
 
-.reviewButton{
-    background-color: rgb(80, 136, 160);
-    color: white;
-    width: 360px;
-    height: 50px;
-    border: 1px solid  rgb(80, 136, 160);
-}
-.reviewButton:hover{
-    background-color: white;
-    color: rgb(80, 136, 160);
-    
-    border: 1px solid  rgb(80, 136, 160);
-}
+
 
 .last{
     font-size: 12px;
 }
 
 
-
+.reviewButton{
+    background-color: rgb(235, 83, 80);
+    color: white;
+    width: 320px;
+    height: 50px;
+    border: 1px solid  rgb(248, 0, 0);
+}
+.reviewButton:hover{
+    background-color: white;
+    color: rgb(254, 3, 3);
+    
+    border: 1px solid  rgb(255, 64, 0);
+}
 
 

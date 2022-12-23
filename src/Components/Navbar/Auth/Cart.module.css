@@ -24,3 +24,68 @@
     display: grid;
     grid-template-columns: 200px 300px 100px 250px;
 }
+.mainContainer{
+    height: 50px;
+    width: 350px;
+    display: grid;
+    grid-template-columns: 170px 170px;
+}
+.shop{
+    background-color: #e3e3e3;
+    border: 1px solid grey;
+}
+.shoppingBag{
+    margin-top: 9% ;
+    text-align: center;
+}
+.saveIt{
+    border: 1px solid grey;
+}
+.saveLater{
+    margin-top: 9%;
+    text-align: center;
+    
+}
+.bagShop{
+    margin-top: 3%;
+}
+.mainImage{
+    height: 150px;
+    width: 150px;
+    margin: 30px;
+}
+.image{
+    width: 100%;
+    height: 100%;
+}
+.title{
+    margin-top: 20px;
+    margin-left: 30px;
+}
+.subTitle{
+    display: flex;
+    gap: 10px;
+}
+.date{
+    font-size: 0.8rem;
+}
+.removeBtn{
+    border: none;
+    background-color: transparent;
+    color: #00819d;
+}
+.saveBtn{
+    margin-left: 70px;
+    border: none;
+    background-color: transparent;
+    color: #00819d;
+}
+.qty{
+    margin-top: 20px;
+    margin-left: 70px;
+}
+.price{
+    margin-top: 20px;
+    margin-left: 100px;
+}
+

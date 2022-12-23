@@ -3,66 +3,39 @@ import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { remove_cart_item } from "../../../Redux/Data/Action";
 import { useNavigate } from "react-router-dom";
+import { AiOutlineGift } from "react-icons/ai";
 import Styles from "./Cart.module.css";
-import styles from "../../InnerPages/Checkout/Check.module.css";
+import ReviewOrder from "./ReviewOrder/ReviewOrder";
+
+
 const Cart = () => {
   const data = useSelector((state) => state.Data.cartData);
   const length = data.length;
   const dispatch = useDispatch();
-
-  const navigate = useNavigate();
-
-
-  var total = 0;
-  var shipping = 199;
-
-  for (var i = 0; i < data.length; i++) {
-    total = total + Number(data[i].price.extracted);
-    // shipping = shipping+ Number(sampledata[i].shipping)
-  }
-
-  console.log(total);
-  console.log(shipping);
-
-  var final = total + shipping + 14;
-
-  console.log(final);
-  const payment = () => {
-    navigate("/checkout");
-  };
+ 
 
   return (
     <div className={Styles.div__1}>
       <div>
-        <div
-          style={{
-            height: "50px",
-            width: "350px",
-            display: "grid",
-            gridTemplateColumns: "170px 170px",
-          }}
-        >
-          <div style={{ backgroundColor: "#e3e3e3", border: "1px solid grey" }}>
-            <h6 style={{ marginTop: "15px", textAlign: "center" }}>
-              Shopping Bag ({length})
-            </h6>
+        <div className={Styles.mainContainer}>
+          <div className={Styles.shop}>
+            <h6 className={Styles.shoppingBag}>Shopping Bag ({length})</h6>
           </div>
-          <div style={{ border: "1px solid grey" }}>
-            <p style={{ textAlign: "center", marginTop: "10px" }}>
-              Save For Later (0)
-            </p>
+          <div className={Styles.saveIt}>
+            <p className={Styles.saveLater}>Save For Later (0)</p>
           </div>
         </div>
 
         <div>
-          <h4 style={{ marginTop: "20px" }}>Shopping Bag</h4>
-          <p style={{ marginTop: "-5px" }}>
-            Items in your bag are not on hold.
+          <h4 className={Styles.bagShop}>Shopping Bag</h4>
+          <p>Items in your bag are not on hold.</p>
+          <p>
+            <label>
+              <AiOutlineGift />
+            </label>
+            Choose gift options when you check out.
           </p>
-          <p style={{ marginTop: "-5px" }}>
-            Add a gift message when you check out.
-          </p>
-          <p style={{ marginTop: "-5px" }}>
+          <p>
             Free Shipping on Orders over $89 for a limited time or free ship to
             U.S. stores.Learn more.{" "}
           </p>
@@ -73,17 +46,17 @@ const Cart = () => {
         {data.map((item) => {
           return (
             <div className={Styles.div__3} key={nanoid()}>
-              <div style={{ height: "100px", width: "100px", margin: "30px" }}>
+              <div className={Styles.mainImage}>
                 <img
-                  style={{ width: "100%", height: "100%" }}
+                  className={Styles.image}
                   src={item.thumbnail}
-                  alt=""
+                  alt="wrong src"
                 />
               </div>
-              <div style={{ marginTop: "20px", marginLeft: "30px" }}>
+              <div className={Styles.title}>
                 <p>{item.title}</p>
-                <div style={{ display: "flex", gap: "10px" }}>
-                  <div style={{ marginTop: "5px" }}>
+                <div className={Styles.subTitle}>
+                  <div>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="30"
@@ -96,44 +69,22 @@ const Cart = () => {
                     </svg>
                   </div>
                   <div>
-                    Delivery{" "}
-                    <p style={{ fontSize: "0.8rem" }}>Thu, 5/12–Wed, 5/18</p>{" "}
+                    Delivery <p className={Styles.date}>Thu, 5/12–Wed, 5/18</p>{" "}
                   </div>
                 </div>
 
                 <button
-                  style={{
-                    border: "none",
-                    backgroundColor: "transparent",
-                    color: "#00819d",
-                  }}
+                  className={Styles.removeBtn}
                   onClick={() => {
                     remove_cart_item(dispatch, item);
                   }}
                 >
                   Remove
                 </button>
-                <button
-                  style={{
-                    marginLeft: "70px",
-                    border: "none",
-                    backgroundColor: "transparent",
-                    color: "#00819d",
-                  }}
-                >
-                  Save for later
-                </button>
+                <button className={Styles.saveBtn}>Save for later</button>
               </div>
-              <div style={{ marginTop: "20px", marginLeft: "70px" }}>
-                <select
-                  name=""
-                  id=""
-                  style={{ border: "none" }}
-                  onClick={(e) => {
-                    // valueChange(e, item);
-                    // setState(true);
-                  }}
-                >
+              <div className={Styles.qty} >
+                <select>
                   <option value="">Qty</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
@@ -147,45 +98,15 @@ const Cart = () => {
                   <option value="10">10</option>
                 </select>
               </div>
-              <div style={{ marginTop: "20px", marginLeft: "100px" }}>
+              <div className={Styles.price} >
                 <p>Price :{item.price.raw}</p>
               </div>
             </div>
           );
         })}
       </div>
-
-      <div className={styles.review1}>
-        <div className={styles.review12}>
-          <p className={styles.size}> Review order</p>
-
-          <div className={styles.flexs}>
-            <p>Your items</p>
-            <p>$ {total}</p>
-          </div>
-
-          <div className={styles.flexs}>
-            <p>Shipping</p>
-            <p>$ {shipping}</p>
-          </div>
-
-          <div className={styles.flexs}>
-            <p>Estimated tax</p>
-            <p>$ 14</p>
-          </div>
-
-          <div className={styles.line}></div>
-
-          <div className={styles.flexs}>
-            <p>Estimated total</p>
-            <p>$ {final}</p>
-          </div>
-
-          <button onClick={payment} className={styles.reviewButton}>
-            Review Order
-          </button>
-        </div>
-      </div>
+        <ReviewOrder />
+     
     </div>
   );
 };

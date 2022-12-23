@@ -1,0 +1,49 @@
+.review1{
+    width: 450px;
+    margin: auto;
+    font-family: Text,Arial,sans-serif;
+    margin-bottom: 2%;
+    box-sizing: border-box;
+    padding: 4%;
+    background-color: rgb(147, 238, 189);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.review12{
+    width: 300px;
+    margin-top: 0%;
+    font-family: Text,Arial,sans-serif;
+    box-sizing: border-box;
+    padding: 4%;
+
+}
+.size{
+    font-size: 30px;
+    text-align: center;
+    color: darkblue;
+    margin-top: -2%;
+    margin-bottom: 12%;
+}
+.flexs{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    font-size: 15px;
+}
+.line{
+    border: 1px solid grey;
+    width: 360px;
+    margin-bottom: 10%;
+}
+.reviewButton{
+    background-color: rgb(235, 83, 80);
+    color: white;
+    width: 320px;
+    height: 50px;
+    border: 1px solid  rgb(248, 0, 0);
+}
+.reviewButton:hover{
+    background-color: white;
+    color: rgb(254, 3, 3);
+    
+    border: 1px solid  rgb(255, 64, 0);
+}
