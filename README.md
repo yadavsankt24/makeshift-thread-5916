@@ -7,7 +7,7 @@ Welcome To Our Project👋
 1. Sanket Yadav
 2. Sankalp Patel
 3. Sanghamitra Satpathy
-4. Ramkrishna Prabhu
+4. Ramkrishna Prabhu (I worked on singlepage and add to cart page)
 
 
 ## About
