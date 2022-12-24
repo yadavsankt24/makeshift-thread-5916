@@ -55,5 +55,36 @@ Nordstrom, Inc. (JWN) is publicly traded on the NYSE.
 * Product sorting functionality by Price.
 * On click Product details.
 
+<h1>Home Page</h1>
+<img src="https://i.postimg.cc/J0H4F1zR/Home-page.png" />
+<br />
+<hr />
+
+<h1>Product Page</h1>
+<img src="https://i.postimg.cc/QxRSwS0D/Product-page.png" />
+<br />
+<hr />
+
+
+<h1>Single Page</h1>
+<img src="https://i.postimg.cc/52s513mj/Singlepage.png" />
+<br />
+<hr />
+
+<h1>Checkout Page Popup</h1>
+<img src="https://i.postimg.cc/Z5WnBxSW/checkout1.png" />
+<br />
+<hr />
+
+<h1>Cart Page</h1>
+<img src="https://i.postimg.cc/Tw0fHKx8/CartPage.png" />
+<br />
+<hr />
+
+<h1>Checkout Page</h1>
+<img src="https://i.postimg.cc/yx25fKD4/Checkout-Fianl.png" />
+<br />
+<hr />
+
 ## Vercel link :-
 <a href="https://makeshift-thread-5916-sankalp2009.vercel.app/">Deploy</a>
