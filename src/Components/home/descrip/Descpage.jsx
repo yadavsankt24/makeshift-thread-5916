@@ -25,8 +25,8 @@ const Descpage = () => {
       },
       largeImage: {
           src: descData.thumbnail,
-          width: 1100,
-          height: 500
+          width: 1300,
+          height: 1100
       }
   }} />
   </div>
