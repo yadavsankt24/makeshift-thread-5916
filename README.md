@@ -60,6 +60,18 @@ Nordstrom, Inc. (JWN) is publicly traded on the NYSE.
 <br />
 <hr />
 
+<h1>Create Account Page</h1>
+<img src="https://i.postimg.cc/wTmJnz1f/Create-Account.png" />
+<br />
+<hr />
+
+<h1>Signin Page</h1>
+<img src="https://i.postimg.cc/52z35v5t/sign-in.png" />
+<br />
+<hr />
+
+
+
 <h1>Product Page</h1>
 <img src="https://i.postimg.cc/QxRSwS0D/Product-page.png" />
 <br />
