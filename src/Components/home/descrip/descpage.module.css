@@ -120,3 +120,38 @@
     height: 130px;
     margin-left: 10px;
 }
+@media (max-width: 940px) {
+    .title{
+        font-size: 16px;  
+    }
+    .price{
+        font-size: 16px;
+    }
+    .cond{
+        font-size: 14px;
+        width: 100%;
+    }
+    .selectTag{
+        width: 70%;
+    }
+    .addbag{
+        width: 70%;
+    }
+}
+@media (max-width: 540px) {
+    .title{
+        font-size: 10px;  
+    }
+    .price{
+        font-size: 10px;
+    }
+    .cond{
+        font-size: 10px;
+    }
+    .selectTag{
+        width: 50%;
+    }
+    .addbag{
+        width: 50%;
+    }
+}
