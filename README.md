@@ -2,7 +2,7 @@ Welcome To Our Project👋
 
 # Project Name - makeshift-thread-5916 (Nordstorm Clone)
 
-Netlify Link ->  "https://bespoke-kringle-d5b015.netlify.app/"
+Netlify Link ->  <a target="_blank" href="https://bespoke-kringle-d5b015.netlify.app/">Netlify Link</a>
 
 <br />
 ##Project Holders
