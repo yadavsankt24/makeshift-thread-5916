@@ -2,6 +2,7 @@ Welcome To Our Project👋
 
 # Project Name - makeshift-thread-5916 (Nordstorm Clone)
 
+Netlify Link => https://bespoke-kringle-d5b015.netlify.app/
 ##Project Holders
 
 1. Sanket Yadav
@@ -98,5 +99,4 @@ Nordstrom, Inc. (JWN) is publicly traded on the NYSE.
 <br />
 <hr />
 
-## Vercel link :-
-<a href="https://makeshift-thread-5916-sankalp2009.vercel.app/">Deploy</a>
+
